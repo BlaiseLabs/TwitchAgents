@@ -1,0 +1,25 @@
+<InteractionModel>
+  <!-- Roles definition -->
+  <Roles>
+    <Role name="Moderator" username="mylabassistant" channel="blaiselabs" class="TwitchMod" input_table="Messages,Summary" token_file="./apis/mylabtoken.txt"/>
+    
+    <Role name="mylabassistant" class="TwitchTestAgent" channel="blaiselabs"   token_file="./apis/mylabtoken.txt" prompt_file="twitch_chat.txt" input_table="Messages,Summary" />
+    
+    <Role name="blabdev01" class="TwitchTestAgent" channel="blaiselabs" token_file="./apis/blabtoken.txt" prompt_file="twitch_chat.txt" input_table="Messages,Summary"/>
+    
+    <Role name="pinoydesign" class="TwitchTestAgent" channel="blaiselabs" token_file="./apis/designtoken.txt" prompt_file="twitch_chat.txt" input_table="Messages,Summary"/>
+  </Roles>
+
+    <!-- Interaction Sequence -->
+    <ConvoLoop>
+
+      <!-- Moderator decides the next action -->
+      <Moderator action="decideNext">
+        <!-- Different cases based on the Moderator's decision -->
+        <Case action="acknowledge" trigger="decideNext" role="mylabassistant"/>
+        <Case action="acknowledge" trigger="decideNext" role="blabdev01"/>
+        <Case action="acknowledge" trigger="decideNext" role="pinoydesign"/>
+      </Moderator>
+
+    </ConvoLoop>
+</InteractionModel>
