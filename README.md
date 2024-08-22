@@ -124,9 +124,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - [TwitchIO](https://github.com/TwitchIO/TwitchIO): The Python library used for interacting with Twitch chat.
 
 - [ConvoXML](https://github.com/TwitchIO/BlaiseLabs/ConvoXML): The ConvoXML framework for modeling conversations.
-
-## Contact
-
-If you have any questions or need assistance, feel free to reach out to [Your Contact Information].
-
-Happy bot building!
